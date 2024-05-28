@@ -1,13 +1,225 @@
+/* Add any custom styles here */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  background-color: #000;
+  padding: 20px 0;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFD700; /* Gold color */
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav a {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+  background-color: #FFD700;
+  color: #000;
+  border-radius: 5px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #FFD700 0%, #000 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  animation: fadeIn 2s ease-in-out;
+  border-radius:20px;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #FFD700;
+  font-family: 'Montserrat', sans-serif;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 45px;
+  animation: slideInFromRight 1.5s ease-in-out;
+}
+
+.hero .btn {
+  background-color: #FFD700;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+  animation: bounceIn 2s ease-in-out;
+}
+
+.hero .btn:hover {
+  background-color: #FFC700;
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin-left: 30px;
+  padding-left: 34px;
+
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFD700;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+  }
+
+  .about h2, .videos h2, .contact h2 {
+    font-size: 28px;
+  }
+
+  .about p, .contact p {
+    font-size: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -1,38 +1,226 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #000;
+  padding: 20px 0;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFD700; /* Gold color */
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav a {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+  background: linear-gradient(135deg, #FFD700, #FFC700);
+  color: #000;
+  border-radius: 5px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #FFD700 0%, #000 100%);
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  animation: fadeIn 2s ease-in-out;
+  border-radius:5px;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #FFD700;
+  font-family: 'Montserrat', sans-serif;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 45px;
+  animation: slideInFromRight 1.5s ease-in-out;
+}
+
+.hero .btn {
+  background-color: #FFD700;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+  animation: bounceIn 2s ease-in-out;
+}
+
+.hero .btn:hover {
+  background-color: #FFC700;
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  margin: 0;
+  flex: 1 1 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 100%;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFD700;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    margin: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }
