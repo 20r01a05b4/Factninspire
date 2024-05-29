@@ -233,3 +233,34 @@ body {
     transform: scale(1);
   }
 }
+
+.logoname {
+  text-align: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: fadeInDown 1s ease-in-out;
+  transition: background 0.5s;
+}
+
+.logo:hover {
+  background: linear-gradient(45deg, #FFA500, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+}
