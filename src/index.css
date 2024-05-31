@@ -1,4 +1,4 @@
-/* Add any custom styles here */
+/* Base styles for larger screens */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -7,6 +7,7 @@ body {
   color: #333;
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: #f5f5f5; /* Light background color */
 }
 
 .header {
@@ -43,19 +44,7 @@ body {
   color: transparent;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-around;
-}
-.nav a {
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-  padding: 10px 0; /* Adjust the vertical padding */
-  flex: 1; /* Make the navbar items take equal space */
-  text-align: center; /* Center align the text */
-  transition: background 0.3s, color 0.3s;
-}
+
 
 .hero {
   background: linear-gradient(135deg, #FFD700 0%, #000 100%);
@@ -64,17 +53,6 @@ body {
   padding: 100px 0;
   animation: fadeIn 2s ease-in-out;
   border-radius: 20px;
-}
-
-.navbar-nav {
-  width: 100%; 
-  display: flex;
-  justify-content: space-around; 
-}
-
-.navbar-nav .nav-item {
-  flex-grow: 1; 
-  padding-left: 50px;
 }
 
 .hero-title {
@@ -136,6 +114,20 @@ body {
   color: #FFD700;
 }
 
+
+/* Specific styles for social media links */
+.social-icons a {
+  font-size: 24px; /* Consistent icon size */
+  margin: 0 10px; /* Spacing between icons */
+  color: #FFD700; /* Gold color to match the theme */
+}
+
+.social-icons a:hover {
+  color: #FFA500; /* Darker gold color on hover */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
@@ -168,6 +160,18 @@ body {
   .social-icons a {
     margin-left: 0;
     margin-top: 10px;
+  }
+
+  
+  .social-icons a {
+    font-size: 20px; /* Smaller icon size on small screens */
+    margin: 5px 5px; /* Adjusted spacing */
+  }
+}
+
+@media (max-width: 530px) {
+  .logo {
+    font-size: 24px; /* Adjust logo size */
   }
 }
 
@@ -270,4 +274,65 @@ body {
   .logo {
     font-size: 24px; 
   }
-} 
+}
+
+/* Navbar container media queries */
+@media (max-width: 530px) {
+
+  .logo {
+    font-size: 24px; 
+    background-color:red;    
+  }
+  .logoname{
+    width:100%;
+  }
+}
+
+
+@media(max-width:400px){
+  .logoname{
+    width:100%;
+    
+  }
+  .logoname h1{
+    font-size:22px;
+  }
+}
+
+@media(max-width:300px){
+  .logoname h1{
+    font-size:16.5px;
+  }
+}
+
+/*navbar container */
+
+.navbar-container{
+  
+  display: flex;
+  justify-content: space-around;
+  
+}
+.navbar-container a{
+  padding-left: 10px;
+  color:white;
+}
+
+@media(max-width:500px){
+  .navbar-outer-container{
+    width:100%;
+    padding-right:10px;
+  }
+ .navbar-container{
+  
+ 
+  width:100%;
+  margin-right:200px;
+ }
+}
+
+@media(max-width:400px){
+  .navbar-container a{
+  font-size: 13px;
+  }
+}

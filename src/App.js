@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import image from "./pages/Images/banner2.jpg";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <header className="header">
@@ -10,31 +16,21 @@ function App() {
           <div className="logo-container col-md-3 text-center">
             <img src={image} alt="channel logo" width="120" height="120" />
           </div>
-          <div className="col-md-9 d-flex flex-column">
+          <div className="col-md-9 d-flex flex-column navbar-outer-container">
             <div className="logoname">
               <h1 className="logo text-center">Welcome to FactsnInspire</h1>
             </div>
-            <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul className="navbar-nav" id="Navbar_items">
-                  <li className="nav-item">
-                    <a className="nav-link" href="/">Home</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/about">About</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/video">Videos</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+            <div className="navbar-toggle" onClick={toggleNavbar}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div className="navbar-container">
+              <a href="/">Home</a>
+              <a href="/video">Video</a>
+              <a href="/contact">Contact</a>
+              <a href="/about">About</a>
+            </div>
           </div>
         </div>
       </header>
