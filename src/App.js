@@ -20,16 +20,13 @@ function App() {
             <div className="logoname">
               <h1 className="logo text-center">Welcome to FactsnInspire</h1>
             </div>
-            <div className="navbar-toggle" onClick={toggleNavbar}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+            
             <div className="navbar-container">
               <a href="/">Home</a>
+              <a href="/about">About</a>
               <a href="/video">Video</a>
               <a href="/contact">Contact</a>
-              <a href="/about">About</a>
+              
             </div>
           </div>
         </div>

@@ -316,12 +316,23 @@ body {
 .navbar-container a{
   padding-left: 10px;
   color:white;
+  text-decoration: none;
 }
+.navbar-container a:hover {
+  background-color: #FFA500; /* Change background color on hover */
+  border-radius: 3px;
+  background-position: right; 
+  padding-right: 11px; 
+  transform: scale(1.05); /* Slight scale effect on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for both properties */
+}
+
 
 @media(max-width:500px){
   .navbar-outer-container{
     width:100%;
     padding-right:10px;
+    padding-top: 10px;
   }
  .navbar-container{
   

@@ -1,8 +1,14 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const About=()=>{
     return(
-        <h1>About page</h1>
+        <>
+        <Navbar></Navbar>
+            <h1>About page</h1>
+        <Footer></Footer>
+        </>
     )
 }
 
