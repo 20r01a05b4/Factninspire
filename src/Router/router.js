@@ -5,6 +5,7 @@ import App from "../App";
 import Contact from "../pages/contact/Contact";
 import About from "../pages/About/About";
 import Home from "../pages/Home/Home";
+import Youtube from "../youtube/Youtube";
 
 const Rout = () => {
   return (
@@ -15,6 +16,7 @@ const Rout = () => {
         <Route path="/video" element={<Video />} />
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path="/youtube" element={<Youtube></Youtube>}></Route>
       </Routes>
     </BrowserRouter>
   );

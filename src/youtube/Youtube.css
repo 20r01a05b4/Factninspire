@@ -1,0 +1,19 @@
+.video-container {
+    padding: 20px;
+  }
+  
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .video-card {
+    width: 560px;
+  }
+  
+  .video-info {
+    padding: 10px;
+  }
+  
